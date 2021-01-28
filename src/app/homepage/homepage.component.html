@@ -1,6 +1,6 @@
 <div class="bs-example">
     <nav class="navbar navbar-expand-md navbar-light bg-blue">
-        <a href="#" class="navbar-brand">MARKETPLACE</a>
+        <a routerLink="/marketplace" class="navbar-brand">MARKETPLACE</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,8 +10,8 @@
                 
             </div>
             <div class="navbar-nav ml-auto">
-                <a href="#" class="nav-item nav-link mr-40">INVEST</a>
-                <a href="#" class="nav-item nav-link mr-66">RAISE CAPITAL</a>
+                <a routerLink="/marketplace" class="nav-item nav-link mr-40">INVEST</a>
+                <a routerLink="/project-valuation" class="nav-item nav-link mr-66">RAISE CAPITAL</a>
 
                 <a href="#" class="nav-item nav-link mr-35">LOGIN</a>
                 <a href="#" class="nav-item nav-link">REGISTER</a>
@@ -38,10 +38,10 @@
                         <button class="learnMoreBtn">LEARN MORE</button>
                     </div>
                     <div class="col-md-2 box">
-                        Invest
+                        <a class="aLink" routerLink="/marketplace">Invest</a>
                     </div>
                     <div class="col-md-2 box">
-                        Raise Capital
+                        <a class="aLink" routerLink="/project-valuation">Raise Capital</a>
                     </div>
                     <div class="col-md-2 box">
                         Trade Shares
@@ -56,11 +56,13 @@
                     <span>Location: Krong Bavet, CAMBODIA</span>
                 </div>
                 <div style="float: right;">
+                    <fa-icon class="card-ic" [icon]="['fas', 'plus']" [fixedWidth]="true" routerLink="/project-valuation"></fa-icon>
                     <fa-icon class="card-ic" [icon]="['fas', 'redo']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic"  [icon]="['fas', 'bookmark']" [fixedWidth]="true"></fa-icon>
                 </div>
                 <div class="card-circle"></div>
-                <button class="card-button">View Deal
+                <button class="card-button">
+                    <a class="cardLink" routerLink="/marketplace">View Deal</a>
                     <i class="fa fa-camera"></i>
                 </button>
             </div>
@@ -70,11 +72,13 @@
                     <span>Location: Krong Bavet, CAMBODIA</span>
                 </div>
                 <div style="float: right;">
+                    <fa-icon routerLink="/project-valuation" class="card-ic" [icon]="['fas', 'plus']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic" [icon]="['fas', 'redo']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic"  [icon]="['fas', 'bookmark']" [fixedWidth]="true"></fa-icon>
                 </div>
                 <div class="card-circle"></div>
-                <button class="card-button">View Deal
+                <button class="card-button">
+                    <a class="cardLink" routerLink="/marketplace">View Deal</a>
                     <i class="fa fa-camera"></i>
                 </button>
             </div>
@@ -84,11 +88,13 @@
                     <span>Location: Krong Bavet, CAMBODIA</span>
                 </div>
                 <div style="float: right;">
+                    <fa-icon routerLink="/project-valuation" class="card-ic" [icon]="['fas', 'plus']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic" [icon]="['fas', 'redo']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic"  [icon]="['fas', 'bookmark']" [fixedWidth]="true"></fa-icon>
                 </div>
                 <div class="card-circle"></div>
-                <button class="card-button">View Deal
+                <button class="card-button">
+                    <a class="cardLink" routerLink="/marketplace">View Deal</a>
                     <i class="fa fa-camera"></i>
                 </button>
             </div>
@@ -98,11 +104,13 @@
                     <span>Location: Krong Bavet, CAMBODIA</span>
                 </div>
                 <div style="float: right;">
+                    <fa-icon routerLink="/project-valuation" class="card-ic" [icon]="['fas', 'plus']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic" [icon]="['fas', 'redo']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic"  [icon]="['fas', 'bookmark']" [fixedWidth]="true"></fa-icon>
                 </div>
                 <div class="card-circle"></div>
-                <button class="card-button">View Deal
+                <button class="card-button">
+                    <a class="cardLink" routerLink="/marketplace">View Deal</a>
                     <i class="fa fa-camera"></i>
                 </button>
             </div>
@@ -112,11 +120,13 @@
                     <span>Location: Krong Bavet, CAMBODIA</span>
                 </div>
                 <div style="float: right;">
+                    <fa-icon routerLink="/project-valuation" class="card-ic" [icon]="['fas', 'plus']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic" [icon]="['fas', 'redo']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic"  [icon]="['fas', 'bookmark']" [fixedWidth]="true"></fa-icon>
                 </div>
                 <div class="card-circle"></div>
-                <button class="card-button">View Deal
+                <button class="card-button">
+                    <a class="cardLink" routerLink="/marketplace">View Deal</a>
                     <i class="fa fa-camera"></i>
                 </button>
             </div>
@@ -126,11 +136,13 @@
                     <span>Location: Krong Bavet, CAMBODIA</span>
                 </div>
                 <div style="float: right;">
+                    <fa-icon routerLink="/project-valuation" class="card-ic" [icon]="['fas', 'plus']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic" [icon]="['fas', 'redo']" [fixedWidth]="true"></fa-icon>
                     <fa-icon class="card-ic"  [icon]="['fas', 'bookmark']" [fixedWidth]="true"></fa-icon>
                 </div>
                 <div class="card-circle"></div>
-                <button class="card-button">View Deal
+                <button class="card-button">
+                    <a class="cardLink" routerLink="/marketplace">View Deal</a>
                     <i class="fa fa-camera"></i>
                 </button>
             </div>
