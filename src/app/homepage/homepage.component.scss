@@ -8,9 +8,25 @@ nav .navbar-nav a,nav .navbar-nav a:hover{
     color: #fff;
 }
 .box{
-    background-color: rgb(204, 53, 30);
+    background-color: rgb(204 53 30 / 69%);
     margin-left: 12px;
-    height: 160px;
+    height: 233px;
     margin-top: 10px;
     border-radius: 25px;
+    line-height: 233px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+.coverBg{
+    background: url(../../assets/images/cover.jpg) no-repeat scroll 0 0 transparent;
+}
+.learnMoreBtn{
+    height: 62px;
+    width: 226px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 28px;
+    margin-left: 74px;
 }
