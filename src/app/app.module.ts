@@ -8,7 +8,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { PortfolioValuationComponent } from './portfolio-valuation/portfolio-valuation.component';
 import { ProjectValuationComponent } from './project-valuation/project-valuation.component';
-
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +22,14 @@ import { ProjectValuationComponent } from './project-valuation/project-valuation
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(private library: FaIconLibrary) {
+    library.addIconPacks(fas,far);
+  }
+}

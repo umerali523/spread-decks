@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -11,5 +11,6 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  faCoffee = faCoffee;
 
 }

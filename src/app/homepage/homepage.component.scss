@@ -30,3 +30,42 @@ nav .navbar-nav a,nav .navbar-nav a:hover{
     margin-top: 28px;
     margin-left: 74px;
 }
+.card-box{
+    height: 355px;
+    background: url(../../assets/images/windmil.jpg) no-repeat scroll 0 0 transparent;
+    margin-left: 128px;
+    max-width: 352px !important;
+    margin-top: 36px;
+}
+.card-circle{
+    border-radius: 50%;
+    height: 70px;
+    background: #fff;
+    width: 73px;
+    position: absolute;
+    bottom: 6px;
+}
+.card-button{
+    height: 36px;
+    position: absolute;
+    bottom: 16px;
+    left: 51%;
+    width: 145px;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 21px;
+    color: #136911;
+    border: none;
+}
+.card-ic{
+    font-size: 22px;
+    margin-right: 6px;
+    stroke: #fff;
+    color:#fff;
+}
+.card-text{
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 32px;
+}
