@@ -1,0 +1,116 @@
+.bg-blue {
+    background-color: #232239 !important;
+}
+nav a,nav a:hover{
+    color: #fff;
+}
+nav .navbar-nav a,nav .navbar-nav a:hover{
+    color: #fff;
+}
+.box{
+    background-color: rgb(204 53 30 / 69%);
+    margin-left: 12px;
+    height: 233px;
+    margin-top: 10px;
+    border-radius: 25px;
+    line-height: 233px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+.coverBg{
+    background: url(../../assets/images/cover.jpg) no-repeat scroll 0 0 transparent;
+}
+.learnMoreBtn{
+    height: 62px;
+    width: 226px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 28px;
+    margin-left: 74px;
+}
+.card-box{
+    height: 355px;
+    background: url(../../assets/images/windmil.jpg) no-repeat scroll 0 0 transparent;
+    margin-left: 100px;
+    max-width: 352px !important;
+    margin-top: 36px;
+    padding-right: 0px;
+}
+.card-circle{
+    border-radius: 50%;
+    height: 70px;
+    background: #fff;
+    width: 73px;
+    position: absolute;
+    bottom: 6px;
+}
+.card-button{
+    height: 36px;
+    position: absolute;
+    bottom: 16px;
+    left: 51%;
+    width: 145px;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 21px;
+    color: #136911;
+    border: none;
+}
+.card-ic{
+    font-size: 20px;
+    margin-right: 6px;
+    stroke: #fff;
+    color:#fff;
+}
+.card-text{
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 32px;
+}
+.aLink{
+    color: #fff;
+    text-decoration: none;
+}
+.cardLink{
+    color: #136911;
+    text-decoration: none;
+}
+.card-footer{
+    height: 355px;
+    background: yellow;
+    margin-left: 100px;
+    max-width: 352px !important;
+    padding-right: 0px;
+}
+.wind-circle{
+    border-radius: 50%;
+    height: 58px;
+    background-color: #2E2C58;
+    margin-top: 9px;
+    margin-left: 8px;
+
+}
+.card-footer-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline red;
+}
+.wind-circle-txt{
+    color: #fff;
+    position: absolute;
+    bottom: 4px;
+    font-size: 12px;
+}
+.card-footer-title-subtext{
+    color: red;
+    font-style: italic;
+    font-size: 11px;
+    display: block;
+}
+.card-footer-location-val{
+    font-size: 15px;
+    text-decoration: underline red;
+}
