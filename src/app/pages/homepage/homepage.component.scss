@@ -1,0 +1,109 @@
+.home-banner{
+    padding: 100px 0;
+    background: url(../../../assets/images/cover.jpg) no-repeat scroll 0 0 transparent;
+    .banner-caption {
+       color: #fff;
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .large-btn {
+            font-size: 24px;
+            background: #fefefe;
+            color: #25253a;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 40%);
+        }
+    }
+
+    .banners-btns {
+        a {
+            background: rgb(238 78 48 / 80%);
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            color: #fff;
+            font-weight: 500;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+.wind-solar-section {
+    margin: 50px 0;
+}
+.wind-solar-box {
+    position: relative;
+ .wind-solar-img {
+     img {
+         max-width: 100%;
+     }
+ }
+ .tool-links {
+     position: absolute;
+     right: 15px;
+     top: 5px;
+     color: #fff;
+     fa-icon {
+         margin-left: 5px;
+     };
+ }
+ .wind-solar-header {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: #fff;
+     h4 {
+        font-size: 14px;
+     }
+ }
+ .wind-solar-bottom {
+     display: flex;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 15px;
+     align-items: flex-end;
+    .wind-circle {
+        background: #fff;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 10px;
+        img {
+            max-height: 100%;
+        }
+    }
+    .action-btn {
+        margin-left: auto;
+        a {
+            background: #d4d5d2;
+            color: #017100;
+            font-weight: 700;
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 10px;
+        }
+    }
+ 
+    }
+ 
+}
