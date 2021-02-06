@@ -46,4 +46,185 @@ body {
             }
         }
     }
+    .table-wrapper {
+        margin-top: 30px;
+        .table th {
+            border-top: none;
+            color: #888;
+        }
+        .tag-label {
+            border: 1px solid #ddd;
+            font-size: 12px;
+            padding: 4px 11px;
+            border-radius: 15px;
+            font-weight: 600;
+            color: #929292;
+        }
+        .info{
+            span{
+                color: #888;
+                font-size: 14px;
+            }
+        }
+        .user-info {
+            font-size: 14px;
+            color: #888;
+        }
+        .share-btn {
+            font-weight: 600;
+            color: #929292;
+            border: 1px solid #ddd;
+            font-size: 12px;
+            padding: 4px 11px;
+            border-radius: 4px;
+        } 
+    }
+}
+
+
+// MARKETPLACE //
+.marketplace {
+    margin: 50px 0;
+}
+.marketplace-card {
+    box-shadow: 1px 1px 7px 3px rgb(0 0 0 / 22%);
+    .marketplace-img {
+        img {
+            max-width: 100%;
+        }
+    }
+    .mp-header {
+        padding: 20px;
+        padding-bottom: 0;
+        .basic-info {
+            display: flex;
+            h3 {
+                font-size: 24px;
+            }
+            .mp-badage {
+                background: $theme-color;
+                margin-left: auto;
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .views-counts {
+            text-align: right;
+            font-size: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+    .mp-body {
+        padding: 20px;
+    }
+    .mp-footer {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 20px 0;
+        display: inline-block;
+        width: 100%;
+        > a {
+            background-color: $theme-color;
+            display:inline-block;
+            padding: 7px 20px;
+            color: #fff;
+        }
+        ul {
+            display: inline-flex;
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            font-size: 12px;
+            li {
+                border-right: 1px solid #888;
+                &:last-child {
+                    border: none;
+                }
+                a {
+                    margin: 7px;
+                    color: #888;
+                }
+            }
+        }
+    }
+}
+.summary-label {
+    ul {
+        display:flex;
+        list-style: none;
+        margin: 0 0 5px;
+        padding: 0;
+    }
+    li {
+        text-transform: uppercase;
+        font-size: 14px;
+        &:first-child {
+            font-weight: 600;
+            color: $theme-color;
+            margin-right: 10px;
+        }
+        &:last-child {
+            span {
+                opacity: 0.1;
+                margin-right: 10px;
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+        &.seeking {
+            text-align: right;
+            width: 100%;
+            font-size: 16px;
+        }
+        &.right-value {
+            text-align: right;
+            width: 49%;
+        }
+    }
+}
+.counter-label {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+    .counter-item {
+        text-align: center;
+        h3 {
+            font-size: 24px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+        h4 {
+            font-size: 16px;
+        }
+    }
+}
+.equity {
+    .equity-pers {
+        display: flex;
+        div {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+    .equity-label {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        color: #cacaca;
+    }
+    .progress {
+        background-color: #545696; 
+    }
+    .progress-bar {
+        background-color: #303055;
+    }
 }
