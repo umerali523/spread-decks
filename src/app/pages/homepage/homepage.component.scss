@@ -1,7 +1,15 @@
 .home-banner{
     padding: 100px 0;
-    background: url(../../../assets/images/cover.jpg) no-repeat scroll 0 0 transparent;
+    background: url(../../../assets/images/cover.jpg) no-repeat;
+    @media screen and (max-width:550px) {
+        padding: 50px 0;
+    }
     .banner-caption {
+        .banner-logo {
+            img {
+                max-width: 100%;
+            }
+        }
        color: #fff;
         h2 {
             font-size: 48px;

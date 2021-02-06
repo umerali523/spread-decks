@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-app-layout',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private render2: Renderer2,
+
+  ) { }
 
   ngOnInit(): void {
+    let body = document.querySelector('body');
+    this.render2.addClass(body, 'grey-bg');
   }
+  
+  ngOnDestroy() {
+    let body = document.querySelector('body');
+    this.render2.removeClass(body, 'grey-bg');
+  }
+
 
 }

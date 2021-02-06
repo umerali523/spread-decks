@@ -14,6 +14,7 @@ import { ProjectValuationComponent } from './pages/project-valuation/project-val
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
 import { WebLayoutComponent } from './layout/web-layout/web-layout.component';
 import { BlankLayoutComponent } from './layout/blank-layout/blank-layout.component';
+import { TradeSharesComponent } from './pages/trade-shares/trade-shares.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { BlankLayoutComponent } from './layout/blank-layout/blank-layout.compone
     ProjectValuationComponent,
     AppLayoutComponent,
     WebLayoutComponent,
-    BlankLayoutComponent
+    BlankLayoutComponent,
+    TradeSharesComponent
   ],
   imports: [
     BrowserModule,
