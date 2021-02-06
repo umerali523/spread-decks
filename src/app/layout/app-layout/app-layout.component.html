@@ -1,1 +1,29 @@
-<p>app-layout works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">SPREAD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Valuation <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Simulation</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Marketplace</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Reporting</a></li>   
+      </ul>
+
+      
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Chat</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">English</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">demo@email.com</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+    <div class="page-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</div>

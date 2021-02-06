@@ -5,7 +5,9 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    &.grey-bg {
+        background: #ede9ee;
+    }
  }
 .mr-40{margin-right: 40px !important;}
 .mr-66{margin-right: 66px !important;}
@@ -13,3 +15,35 @@ body {
 .bold{font-weight: bold !important;}
 .mt-50{margin-top: 50px !important;} 
 .mb-48{margin-bottom: 48px !important;}
+
+.icon {
+    width:20px;
+    height: 20px;
+    background-size: 100% !important;
+    display: block;
+}
+.icon.solar {
+    background: url(./assets/images/solar-energy.svg) no-repeat;
+}
+.icon.wind {
+    width: 27px;
+    height: 44px;
+    background: url(./assets/images/wind.svg) no-repeat;
+}
+.gird-section {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    .filter-links {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+            li {
+                padding: 7px 10px;
+            }
+        }
+    }
+}
