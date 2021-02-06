@@ -62,13 +62,16 @@
      }
  }
  .tool-links {
-     position: absolute;
-     right: 15px;
-     top: 5px;
-     color: #fff;
-     fa-icon {
-         margin-left: 5px;
-     };
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #fff;
+    z-index: 10;
+    a {
+        color: #fff;
+        margin-left: 12px;
+        display: inline-block;
+    }
  }
  .wind-solar-header {
     position: absolute;
