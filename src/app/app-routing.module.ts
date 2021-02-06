@@ -5,6 +5,7 @@ import { WebLayoutComponent } from './layout/web-layout/web-layout.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { MarketplaceComponent } from './pages/marketplace/marketplace.component';
 import { PortfolioValuationComponent } from './pages/portfolio-valuation/portfolio-valuation.component';
+import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { ProjectValuationComponent } from './pages/project-valuation/project-valuation.component';
 import { TradeSharesComponent } from './pages/trade-shares/trade-shares.component';
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'' , component:AppLayoutComponent, children:[
     { path:'project-valuation' , component:ProjectValuationComponent},
     { path:'portfolio-valuation' , component:PortfolioValuationComponent},
+    { path:'project-valuation-details' , component:ProjectDetailComponent},
   ]},
   { path:'**' , redirectTo:'home' , pathMatch:'full'}, 
 
