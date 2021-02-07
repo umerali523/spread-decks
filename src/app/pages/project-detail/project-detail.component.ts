@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectDetailComponent implements OnInit {
 
+  activeTab:string = 'overview';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleTab(activeTabe:string){
+    this.activeTab = activeTabe;
   }
 
 }

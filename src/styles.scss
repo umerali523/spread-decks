@@ -349,4 +349,38 @@ body {
         }
       
     }
+
+    .graph-table-header {
+        display: flex;
+        .graph-links {  
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+            list-style: none;
+            li {
+                a {
+                    margin: 0 10px;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &.active {
+                    a{
+                        background: #1b1b1b;
+                        color: #fff;
+                        font-size: 14px;
+                        display: block;
+                        padding: 2px 7px;
+                        border-radius: 7px;
+                    }
+                  
+                }
+            }
+           
+        }
+        .view-btn {
+            margin-left: auto;
+        }
+        
+    }
 }

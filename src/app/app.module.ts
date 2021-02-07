@@ -12,6 +12,8 @@ import { WebLayoutComponent } from './layout/web-layout/web-layout.component';
 import { BlankLayoutComponent } from './layout/blank-layout/blank-layout.component';
 import { TradeSharesComponent } from './pages/trade-shares/trade-shares.component';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
+import { FimoComponent } from './pages/project-detail/project-tabs/fimo/fimo.component';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +25,13 @@ import { ProjectDetailComponent } from './pages/project-detail/project-detail.co
     WebLayoutComponent,
     BlankLayoutComponent,
     TradeSharesComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    FimoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ChartsModule,
     NgbModule,
   ],
   providers: [],
