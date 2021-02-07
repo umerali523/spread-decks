@@ -143,8 +143,8 @@
                         </ul>
                         <div class="view-btn">
                             <ul class="graph-links">
-                                <li class="active"><a href="#">Graphic</a></li>
-                                <li><a href="#">Table</a></li>
+                                <li [class.active]="activeViewType == 'graph'"><a (click)="toggleViewType('graph')">Graphic</a></li>
+                                <li [class.active]="activeViewType == 'table'"><a (click)="toggleViewType('table')">Table</a></li>
                             </ul>
     
                         </div>
@@ -153,7 +153,647 @@
                    
                 </div>
                 <div class="card-body">
-                        grah and table view
+                    <ng-container *ngIf="activeViewType == 'graph'">
+                      <div style="display: inline-block; width: 100%;">
+
+                        <canvas baseChart
+                        height="50"
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"                        
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                      </canvas>
+                      </div>
+                   
+
+                    </ng-container>
+                    <ng-container *ngIf="activeViewType == 'table'">
+                            <div class="table-responsive">
+                                <table cellspacing="0" cellpadding="0" class="table table-bordered">
+                                <tr>
+                                    <th style="width: 200px;">&nbsp;</th>
+                                    <th colspan="4">2021</th>
+                                    <th colspan="4">2022</th>
+                                    <th colspan="4">2023</th>
+                                    <th colspan="4">2024</th>
+                                    <th colspan="4">2025</th>
+                                    <th colspan="4">2026</th>
+                                    <th colspan="4">2027</th>
+                                    <th colspan="4">2028</th>
+                                    <th colspan="4">2029</th>
+                                    <th colspan="4">2030</th>
+                                  </tr>
+                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                    <td>Q1</td>
+                                    <td>Q2</td>
+                                    <td>Q3</td>
+                                    <td>Q4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Sales</td>
+                                    <td class="text-right">0</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3.25</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">2.75</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">2.75</td>
+                                    <td class="text-right">2.75</td>
+                                    <td class="text-right">2.75</td>
+                                    <td class="text-right">2.75</td>
+                                    <td class="text-right">2.5</td>
+                                    <td class="text-right">2.5</td>
+                                    <td class="text-right">2.5</td>
+                                    <td class="text-right">0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Opex (Internal)</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Tax</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Capex (internal)</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                    <td class="text-right">0.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Transaction Expenditure (Internal)</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Debt Redemption</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Debt Interest</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Reserve Account (Internal)</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                    <td class="text-right">0.12</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Open Items (Internal)</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                    <td class="text-right">0.15</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Shareholder Loan Service</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Distribution</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                    <td class="text-right">0.4</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Change in Liquidity Gap</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                    <td class="text-right">0.2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Change in Liquidity Trap</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                    <td class="text-right">0.3</td>
+                                  </tr>
+                                 
+                                </table>
+                                
+                            </div>
+
+                    </ng-container>
+
+                      
                 </div>
               </div>
         </ng-container>
