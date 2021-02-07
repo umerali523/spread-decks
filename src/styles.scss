@@ -8,6 +8,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     &.grey-bg {
         background: #ede9ee;
+        .container-fluid {
+            min-width: 1400px;
+        }
+
     }
  }
 .mr-40{margin-right: 40px !important;}
@@ -227,5 +231,122 @@ body {
     }
     .progress-bar {
         background-color: #303055;
+    }
+}
+.project-details {
+    min-width: 1600px;
+    @media(max-width:1400px){
+        font-size: 14px;
+    }
+    .sub-header {
+        background: #fff;
+        margin-left: -15px;
+        margin-right: -15px;
+        overflow: hidden;
+        padding: 15px;
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .project-version {
+            margin-left: 20px;
+        }
+        .breadcrumb-nav {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: inline-flex;
+                li {
+                    position: relative;
+                    margin-right: 10px;
+                    &::after {
+                        content: '/';
+                        margin-left: 10px;
+                    } 
+                }
+            }
+        }
+        .sub-links {
+            text-align: right;
+            margin-top: 4px;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: inline-flex;
+                li {
+                    border-right: 1px solid #ddd;
+                    &:last-child {
+                        border:none
+                    } 
+                    a {
+                        margin:0 10px;
+                    }
+                }
+            }
+        }
+
+    }
+ 
+    
+    .app-tabs {
+        background: #fff;
+        margin-top: 20px;
+        display: flex;
+        padding: 5px;
+        .tab-right {
+            margin-left: auto;
+            a {
+                background: #007bff;
+                color: #fff;
+                padding: 7px 10px;
+                display: inline-block;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding:0;
+            display: inline-flex;
+            li {
+                &.divider {
+                    border-right: 1px solid #ddd;
+                    margin: 0 5px;
+                }
+                &.active {
+                    a {
+                        background: #007bff;
+                        color: #fff;
+                    }
+                }
+                a {
+                    padding: 7px 10px;
+                    display: inline-block;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .tab-body {
+        background: #fff;
+        margin-top: 20px;
+        padding: 15px;
+    }
+    .table {
+        .sm-row {
+            td {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+        }
+        td{
+            &.cell-info {
+                background: #dbf4ff;
+            }
+        }
+      
     }
 }
