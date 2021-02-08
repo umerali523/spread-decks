@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
 
@@ -32,7 +33,9 @@ export class ProjectDetailComponent implements OnInit {
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
 
-  constructor(private titleService: Title) { }
+  constructor(
+    private titleService: Title,
+    ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('SPREAD | Project Details');

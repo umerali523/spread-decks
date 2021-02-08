@@ -15,8 +15,9 @@
       <th>Nov 21</th>
       <th>Dec 21</th>
     </tr>
-    <tr>
-      <td >ACTIVA</td>
+    <tr class="heighlight-row">
+      <!-- [ngClass]="{'fa-minus-square': activeRow == 'activa', 'fa-plus-square': activeRow != 'activa' }"  -->
+      <td> <a (click)="collapseTableRow(rowID = 0, showHideRow)"><i class="far"></i> ACTIVA</a> </td>
       <td class="text-right">14,840</td>
       <td class="text-right">14,798</td>
       <td class="text-right">14,755</td>
@@ -30,8 +31,10 @@
       <td class="text-right">37,921</td>
       <td class="text-right">37,944</td>
     </tr>
+
+    <ng-container *ngIf="rowID == 0 && showHideRow">
     <tr>
-      <td >Liquidity</td>
+      <td class="child-cell">Liquidity</td>
       <td class="text-right">6,659</td>
       <td class="text-right">6,659</td>
       <td class="text-right">6,659</td>
@@ -120,8 +123,10 @@
       <td class="text-right">34,172</td>
       <td class="text-right">33,988</td>
     </tr>
-    <tr>
-      <td >PASSIVE</td>
+  </ng-container>
+  <!-- [ngClass]="{'fa-minus-square': activeRow == 'passive', 'fa-plus-square': activeRow != 'passive' }" -->
+    <tr class="heighlight-row">
+      <td> <a (click)="collapseTableRow(rowID = 1, showHideRow)"><i   class="far fa-plus-square"></i>  PASSIVE</a> </td>
       <td class="text-right">-14,840</td>
       <td class="text-right">-14,798</td>
       <td class="text-right">-14,755</td>
@@ -135,6 +140,8 @@
       <td class="text-right">-37,921</td>
       <td class="text-right">-37,944</td>
     </tr>
+
+    <ng-container *ngIf="rowID == 1 && showHideRow">
     <tr>
       <td >Liquidity Gap</td>
       <td class="text-right">0</td>
@@ -270,4 +277,5 @@
       <td class="text-right">0</td>
       <td class="text-right">0</td>
     </tr>
+  </ng-container>
   </table>

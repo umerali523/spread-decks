@@ -38,6 +38,21 @@ body {
     height: 44px;
     background: url(./assets/images/wind.svg) no-repeat;
 }
+.table {
+    a {
+        cursor: pointer;
+    }
+    tr {
+        &.heighlight-row {
+            background: #f1fff0 !important;
+        }
+    }
+    td {
+        &.child-cell {
+            padding-left: 30px !important
+        }
+    }
+}
 .gird-section {
     background: #fff;
     padding: 20px;
@@ -59,6 +74,10 @@ body {
     .table-wrapper {
         margin-top: 30px;
         th {
+            i {
+                position: relative;
+                top: -4px;
+            }
             .pagination {
                 margin-bottom: 0;
                 justify-content: flex-end;
@@ -73,6 +92,7 @@ body {
                 }
             }
         }
+     
 
         .table th {
             border-top: none;
@@ -414,6 +434,7 @@ body {
             padding: 0;
             display: inline-flex;
             list-style: none;
+            color: #bfbfbf;
             li {
                 a {
                     margin: 0 10px;
