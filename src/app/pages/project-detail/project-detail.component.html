@@ -6,7 +6,7 @@
                     <div class="breadcrumb-nav">
                         <ul>
                             <li>Projects</li>
-                            <li><a href="#">Wind Onshore DE (Demo)</a> </li>
+                            <li><a >Wind Onshore DE (Demo)</a> </li>
                         </ul>
                     </div>
                     <div class="project-version">
@@ -27,11 +27,11 @@
             <div class="col-md-6">
                 <div class="sub-links">
                     <ul>
-                        <li><a href="#">Project IRR 3.8%</a></li>
-                        <li><a href="#">Equity IRR 3.8%</a></li>
-                        <li><a href="#">Payout IRR 3.8%</a></li>
-                        <li><a href="#">25 Years</a></li>
-                        <li><a href="#">P-Value 75%</a></li>
+                        <li><a >Project IRR 3.8%</a></li>
+                        <li><a >Equity IRR 3.8%</a></li>
+                        <li><a >Payout IRR 3.8%</a></li>
+                        <li><a >25 Years</a></li>
+                        <li><a >P-Value 75%</a></li>
                     </ul>
 
                 </div>
@@ -46,26 +46,36 @@
     <div class="app-tabs">
         <div class="tab-left">
             <ul>
-                <li><a href="#"><i class="fas fa-ellipsis-h"></i></a> </li>
+              <!-- <a ><i class="fas fa-ellipsis-h"></i></a>  -->
+                <li>
+                  <ul ngbDropdown #listDropdown="ngbDropdown" class="navbar-nav actionLinks">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" ngbDropdownToggle ></a>
+                        <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" ><i></i> Edit</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
                 <li class="divider"></li>
-                <li><a href="#">Master</a> </li>
-                <li [class.active]="activeTab=='overview'"><a (click)="toggleTab('overview')">Overview</a> </li>
+                <li><a >Master</a> </li>
+                <li [class.active]="activeTab=='overview'" class="cursor-pointer"><a (click)="toggleTab('overview')">Overview</a> </li>
                 <li class="divider"></li>
-                <li [class.active]="activeTab=='fimo'"><a (click)="toggleTab('fimo')">Fimo</a> </li>
-                <li><a href="#">Production</a> </li>
-                <li><a href="#">Sales</a> </li>
-                <li><a href="#">Opex</a> </li>
-                <li><a href="#">Campex</a> </li>
-                <li><a href="#">Debt</a> </li>
-                <li><a href="#">Taxes</a> </li>
-                <li><a href="#">Transaction</a> </li>
+                <li [class.active]="activeTab=='fimo'" class="cursor-pointer"><a (click)="toggleTab('fimo')">Fimo</a> </li>
+                <li><a >Production</a> </li>
+                <li><a >Sales</a> </li>
+                <li><a >Opex</a> </li>
+                <li><a >Campex</a> </li>
+                <li><a >Debt</a> </li>
+                <li><a >Taxes</a> </li>
+                <li><a >Transaction</a> </li>
                 <li class="divider"></li>
-                <li><a href="#">Tempaltes</a> </li>
+                <li><a >Tempaltes</a> </li>
             </ul>
         </div>
         <div class="tab-right">
 
-            <a href="#"><i class="fas fa-share-alt"></i> Share Project</a>
+            <a ><i class="fas fa-share-alt"></i> Share Project</a>
         </div>
 
     </div>
@@ -138,13 +148,13 @@
     
                     <div class="graph-table-header">
                         <ul class="graph-links">
-                            <li class="active"><a href="#">Internal CF waterfall</a></li>
-                            <li><a href="#">Internal CF waterfall (∑)</a></li>
+                            <li class="active"><a >Internal CF waterfall</a></li>
+                            <li><a >Internal CF waterfall (∑)</a></li>
                         </ul>
                         <div class="view-btn">
                             <ul class="graph-links">
-                                <li [class.active]="activeViewType == 'graph'"><a (click)="toggleViewType('graph')">Graphic</a></li>
-                                <li [class.active]="activeViewType == 'table'"><a (click)="toggleViewType('table')">Table</a></li>
+                                <li [class.active]="activeViewType == 'graph'" class="cursor-pointer"><a (click)="toggleViewType('graph')">Graphic</a></li>
+                                <li [class.active]="activeViewType == 'table'" class="cursor-pointer"><a (click)="toggleViewType('table')">Table</a></li>
                             </ul>
     
                         </div>

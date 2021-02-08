@@ -15,7 +15,7 @@ const routes: Routes = [
     { path:'' , component:HomepageComponent},
     { path:'home' , component:HomepageComponent},
     { path:'marketplace' , component:MarketplaceComponent},
-    { path:'traed-shares' , component:TradeSharesComponent},
+    { path:'trade-shares' , component:TradeSharesComponent},
 
  
   ]},
