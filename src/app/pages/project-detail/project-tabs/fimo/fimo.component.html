@@ -16,8 +16,7 @@
       <th>Dec 21</th>
     </tr>
     <tr class="heighlight-row">
-      <!-- [ngClass]="{'fa-minus-square': activeRow == 'activa', 'fa-plus-square': activeRow != 'activa' }"  -->
-      <td> <a (click)="collapseTableRow(rowID = 0, showHideRow)"><i class="far"></i> ACTIVA</a> </td>
+      <td> <a  (click)="collapseTableRow('activa')"><i [ngClass]="{'fa-minus-square': activeTab.tabName == 'activa' && !activeTab.status, 'fa-plus-square': ((activeTab.tabName == 'activa' && activeTab.status)||activeTab.tabName==''||activeTab.tabName != 'activa')}" class="far"></i> ACTIVA</a> </td>
       <td class="text-right">14,840</td>
       <td class="text-right">14,798</td>
       <td class="text-right">14,755</td>
@@ -32,7 +31,7 @@
       <td class="text-right">37,944</td>
     </tr>
 
-    <ng-container *ngIf="rowID == 0 && showHideRow">
+    <ng-container *ngIf="activeTab.tabName == 'activa' && !activeTab.status">
     <tr>
       <td class="child-cell">Liquidity</td>
       <td class="text-right">6,659</td>
@@ -49,7 +48,7 @@
       <td class="text-right">1,699</td>
     </tr>
     <tr>
-      <td >Accounts Receivable</td>
+      <td class="child-cell"><i class="far fa-plus-square"></i> Accurals Receivable</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
@@ -64,7 +63,7 @@
       <td class="text-right">0</td>
     </tr>
     <tr>
-      <td >Pre Payments</td>
+      <td class="child-cell">Pre Payments</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
@@ -79,7 +78,7 @@
       <td class="text-right">993</td>
     </tr>
     <tr>
-      <td >Reserve Accounts</td>
+      <td class="child-cell"><i class="far fa-plus-square"></i> Reserve Accounts</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
@@ -94,7 +93,7 @@
       <td class="text-right">1,050</td>
     </tr>
     <tr>
-      <td >Transaction Expenditures</td>
+      <td class="child-cell"><i class="far fa-plus-square"></i> Transaction Expenditures</td>
       <td class="text-right">70</td>
       <td class="text-right">70</td>
       <td class="text-right">69</td>
@@ -109,7 +108,7 @@
       <td class="text-right">215</td>
     </tr>
     <tr>
-      <td >Asset Book Value</td>
+      <td class="child-cell"><i class="far fa-plus-square"></i> Asset Book Value</td>
       <td class="text-right">8,112</td>
       <td class="text-right">8,070</td>
       <td class="text-right">8,027</td>
@@ -126,7 +125,7 @@
   </ng-container>
   <!-- [ngClass]="{'fa-minus-square': activeRow == 'passive', 'fa-plus-square': activeRow != 'passive' }" -->
     <tr class="heighlight-row">
-      <td> <a (click)="collapseTableRow(rowID = 1, showHideRow)"><i   class="far fa-plus-square"></i>  PASSIVE</a> </td>
+      <td> <a (click)="collapseTableRow('passive')"><i [ngClass]="{'fa-minus-square': activeTab.tabName == 'passive' && !activeTab.status, 'fa-plus-square': ((activeTab.tabName == 'passive' && activeTab.status)||activeTab.tabName==''||activeTab.tabName != 'passive')}" class="far"></i>  Passiva</a> </td>
       <td class="text-right">-14,840</td>
       <td class="text-right">-14,798</td>
       <td class="text-right">-14,755</td>
@@ -141,9 +140,9 @@
       <td class="text-right">-37,944</td>
     </tr>
 
-    <ng-container *ngIf="rowID == 1 && showHideRow">
+    <ng-container *ngIf="activeTab.tabName == 'passive' && !activeTab.status">
     <tr>
-      <td >Liquidity Gap</td>
+      <td class="child-cell">Liquidity Gap</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
       <td class="text-right">0</td>
@@ -158,7 +157,7 @@
       <td class="text-right">0</td>
     </tr>
     <tr>
-      <td >Accounts Payable</td>
+      <td class="child-cell"><i class="far fa-plus-square"></i> Accurals Payable</td>
       <td class="text-right">0</td>
       <td class="text-right">-19</td>
       <td class="text-right">-38</td>
@@ -173,7 +172,7 @@
       <td class="text-right">-147</td>
     </tr>
     <tr>
-      <td >Provisions</td>
+      <td class="child-cell">Provisions</td>
       <td class="text-right">0</td>
       <td class="text-right">-2</td>
       <td class="text-right">-4</td>
@@ -188,7 +187,7 @@
       <td class="text-right">-24</td>
     </tr>
     <tr>
-      <td >Debt</td>
+      <td class="child-cell"><i class="far fa-plus-square"></i> Debt</td>
       <td class="text-right">-6,014</td>
       <td class="text-right">-6,014</td>
       <td class="text-right">-6,014</td>
@@ -203,7 +202,7 @@
       <td class="text-right">-29,707</td>
     </tr>
     <tr>
-      <td >Shareholder Loan</td>
+      <td class="child-cell"><i class="far fa-plus-square"></i> Shareholder Loan</td>
       <td class="text-right">-3,000</td>
       <td class="text-right">-3,000</td>
       <td class="text-right">-3,000</td>
@@ -218,7 +217,7 @@
       <td class="text-right">-3,000</td>
     </tr>
     <tr>
-      <td >Equity</td>
+      <td class="child-cell"><a (click)="equityCollapsed=!equityCollapsed"><i [ngClass]="{'fa-plus-square':!equityCollapsed,'fa-minus-square':equityCollapsed}" class="far"></i></a> Equity</td>
       <td class="text-right">-5,826</td>
       <td class="text-right">-5,762</td>
       <td class="text-right">-5,698</td>
@@ -232,50 +231,52 @@
       <td class="text-right">-5,119</td>
       <td class="text-right">-5,066</td>
     </tr>
-    <tr>
-      <td >Pure Equity</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-      <td class="text-right">-5,851</td>
-    </tr>
-    <tr>
-      <td >Accumulated Profits</td>
-      <td class="text-right">25</td>
-      <td class="text-right">89</td>
-      <td class="text-right">153</td>
-      <td class="text-right">417</td>
-      <td class="text-right">601</td>
-      <td class="text-right">735</td>
-      <td class="text-right">828</td>
-      <td class="text-right">796</td>
-      <td class="text-right">738</td>
-      <td class="text-right">711</td>
-      <td class="text-right">733</td>
-      <td class="text-right">785</td>
-    </tr>
-    <tr>
-      <td >Accumulated Distributions</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-      <td class="text-right">0</td>
-    </tr>
+    <ng-container *ngIf="equityCollapsed">
+      <tr>
+        <td class="sec-child-cell">Pure Equity</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+        <td class="text-right">-5,851</td>
+      </tr>
+      <tr>
+        <td class="sec-child-cell">Accumulated Profits</td>
+        <td class="text-right">25</td>
+        <td class="text-right">89</td>
+        <td class="text-right">153</td>
+        <td class="text-right">417</td>
+        <td class="text-right">601</td>
+        <td class="text-right">735</td>
+        <td class="text-right">828</td>
+        <td class="text-right">796</td>
+        <td class="text-right">738</td>
+        <td class="text-right">711</td>
+        <td class="text-right">733</td>
+        <td class="text-right">785</td>
+      </tr>
+      <tr>
+        <td class="sec-child-cell">Accumulated Distributions</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+        <td class="text-right">0</td>
+      </tr>
+    </ng-container>
   </ng-container>
   </table>

@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class FimoComponent implements OnInit {
 
   activeRow: string = 'activa';
-  
-  
-  showHideRow: boolean = false;
-  rowID:number = 0;
-
+  activeTab = {
+    tabName : 'activa',
+    status : false
+  }
+  equityCollapsed : boolean = true;
 
 
 
@@ -22,8 +22,13 @@ export class FimoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  collapseTableRow(rowID:number, isActiveRow:boolean){
-    this.showHideRow =! this.showHideRow;   
-    this.rowID = rowID;
+  collapseTableRow(tabName:string){
+    if(this.activeTab.tabName!='' && this.activeTab.tabName!=tabName){
+      this.activeTab.status = false;
+    }
+    if(this.activeTab.tabName == tabName){
+      this.activeTab.status = !this.activeTab.status;
+    }
+    this.activeTab.tabName = tabName;
   }
 }

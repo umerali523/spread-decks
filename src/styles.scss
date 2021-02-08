@@ -51,6 +51,9 @@ body {
         &.child-cell {
             padding-left: 30px !important
         }
+        &.sec-child-cell {
+            padding-left: 60px !important
+        }
     }
 }
 .gird-section {
@@ -468,3 +471,6 @@ body {
     cursor: pointer;
 }
 .bold-text{font-weight: bold !important;}
+.table-bordered i {
+    color: #007bff !important;
+}
