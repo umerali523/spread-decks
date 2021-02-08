@@ -38,6 +38,11 @@ export class ProjectDetailComponent implements OnInit {
 
   toggleTab(activeTabe:string){
     this.activeTab = activeTabe;
+    if(activeTabe == 'fimo'){
+      this.activeViewType = 'table';
+    }else{
+      this.activeViewType = 'graph';
+    }
   }
   toggleViewType(type:string){
     this.activeViewType = type;

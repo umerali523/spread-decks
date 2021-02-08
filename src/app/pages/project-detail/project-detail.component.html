@@ -134,7 +134,7 @@
             
                     </div>
                 </div>
-              </div>
+            </div>
     
               <div class="card">
                 <div class="card-header">
@@ -810,7 +810,32 @@
               </div>
         </ng-container>
         <ng-container *ngIf="activeTab == 'fimo'">
-            <app-fimo></app-fimo>
+          <div class="card">
+            <div class="card-header">
+
+                <div class="graph-table-header">
+                    <ul class="graph-links">
+                        <li><a class="customLink">Profit & Loss</a></li>/
+                        <li><a class="customLink">Cashflow</a></li>/
+                        <li class="active"><a >Balancesheet</a></li>
+                    </ul>
+                    <div class="view-btn">
+                        <ul class="graph-links">
+                          <!-- (click)="toggleViewType('table')" -->
+                          <!-- (click)="toggleViewType('graph')" -->
+                            <li [class.active]="activeViewType == 'graph'" class="cursor-pointer"><a class="customLink">Graphic</a></li>/
+                            <li [class.active]="activeViewType == 'table'" class="cursor-pointer"><a >Table</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="card-body">
+              <app-fimo></app-fimo>
+            </div>
+          </div>
         </ng-container>
 
 
