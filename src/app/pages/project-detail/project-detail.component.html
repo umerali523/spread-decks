@@ -5,7 +5,7 @@
                 <div class="header-left">
                     <div class="breadcrumb-nav">
                         <ul>
-                            <li>Projects</li>
+                            <li><a class="customLink">Projects</a></li>
                             <li><a >Wind Onshore DE (Demo)</a> </li>
                         </ul>
                     </div>
@@ -27,11 +27,11 @@
             <div class="col-md-6">
                 <div class="sub-links">
                     <ul>
-                        <li><a >Project IRR 3.8%</a></li>
-                        <li><a >Equity IRR 3.8%</a></li>
-                        <li><a >Payout IRR 3.8%</a></li>
-                        <li><a >25 Years</a></li>
-                        <li><a >P-Value 75%</a></li>
+                        <li><a class="customLink">Project IRR 3.8%</a></li>
+                        <li><a class="customLink">Equity IRR 3.8%</a></li>
+                        <li><a class="customLink">Payout IRR 3.8%</a></li>
+                        <li><a class="customLink">25 Years</a></li>
+                        <li><a class="customLink">P-Value 75%</a></li>
                     </ul>
 
                 </div>
@@ -46,31 +46,24 @@
     <div class="app-tabs">
         <div class="tab-left">
             <ul>
-              <!-- <a ><i class="fas fa-ellipsis-h"></i></a>  -->
+              <!--   -->
                 <li>
-                  <ul ngbDropdown #listDropdown="ngbDropdown" class="navbar-nav actionLinks">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" ngbDropdownToggle ></a>
-                        <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" ><i></i> Edit</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                  <a class="customLink"><i class="fas fa-ellipsis-h"></i></a>
                 </li>
                 <li class="divider"></li>
-                <li><a >Master</a> </li>
-                <li [class.active]="activeTab=='overview'" class="cursor-pointer"><a (click)="toggleTab('overview')">Overview</a> </li>
+                <li class="customLink"><a >Master</a> </li>
+                <li [class.active]="activeTab=='overview'" class="customLink"><a (click)="toggleTab('overview')">Overview</a> </li>
                 <li class="divider"></li>
-                <li [class.active]="activeTab=='fimo'" class="cursor-pointer"><a (click)="toggleTab('fimo')">Fimo</a> </li>
-                <li><a >Production</a> </li>
-                <li><a >Sales</a> </li>
-                <li><a >Opex</a> </li>
-                <li><a >Campex</a> </li>
-                <li><a >Debt</a> </li>
-                <li><a >Taxes</a> </li>
-                <li><a >Transaction</a> </li>
+                <li [class.active]="activeTab=='fimo'" class="customLink"><a (click)="toggleTab('fimo')">Fimo</a> </li>
+                <li><a class="customLink">Production</a> </li>
+                <li><a class="customLink">Sales</a> </li>
+                <li><a class="customLink">Opex</a> </li>
+                <li><a class="customLink">Campex</a> </li>
+                <li><a class="customLink">Debt</a> </li>
+                <li><a class="customLink">Taxes</a> </li>
+                <li><a class="customLink">Transaction</a> </li>
                 <li class="divider"></li>
-                <li><a >Tempaltes</a> </li>
+                <li><a class="customLink">Templates</a> </li>
             </ul>
         </div>
         <div class="tab-right">
@@ -109,7 +102,7 @@
                             </tr>
                             <tr>
                               <td>Project Return</td>
-                              <td class="cell-info text-right">3.9</td>
+                              <td class="cell-info text-right bold-text">3.9</td>
                               <td class="text-right">14.6</td>
                               <td class="text-right">January 2031</td>
                               <td class="text-right">146.3</td>
@@ -119,7 +112,7 @@
                             </tr>
                             <tr>
                               <td>Equity Return</td>
-                              <td class="text-right cell-info">6.1</td>
+                              <td class="text-right cell-info bold-text">6.1</td>
                               <td class="text-right">17.8</td>
                               <td class="text-right">April 2034</td>
                               <td class="text-right">217.6</td>
@@ -129,7 +122,7 @@
                             </tr>
                             <tr>
                               <td>Payout Return</td>
-                              <td class="text-right cell-info">5.4</td>
+                              <td class="text-right cell-info bold-text">5.4</td>
                               <td class="text-right">18.5</td>
                               <td class="text-right">December 2034</td>
                               <td class="text-right">217.6</td>
@@ -148,13 +141,22 @@
     
                     <div class="graph-table-header">
                         <ul class="graph-links">
-                            <li class="active"><a >Internal CF waterfall</a></li>
-                            <li><a >Internal CF waterfall (∑)</a></li>
+                            <li class="active"><a >Internal CF waterfall</a></li>/
+                            <li><a class="customLink">Internal CF waterfall (∑)</a></li>/
+                            <li><a class="customLink">Internal CF waterfall (∑)</a></li>/
+                            <li><a class="customLink">Uses & Sources</a></li>/
+                            <li><a class="customLink">Uses & Sources (∑)</a></li>/
+                            <li><a class="customLink">CFs</a></li>/
+                            <li><a class="customLink">CFs (∑)</a></li>/
+                            <li><a class="customLink">DSCR</a></li>/
+                            <li><a class="customLink">Liquidity</a></li>
                         </ul>
                         <div class="view-btn">
                             <ul class="graph-links">
-                                <li [class.active]="activeViewType == 'graph'" class="cursor-pointer"><a (click)="toggleViewType('graph')">Graphic</a></li>
-                                <li [class.active]="activeViewType == 'table'" class="cursor-pointer"><a (click)="toggleViewType('table')">Table</a></li>
+                              <!-- (click)="toggleViewType('table')" -->
+                              <!-- (click)="toggleViewType('graph')" -->
+                                <li [class.active]="activeViewType == 'graph'" class="cursor-pointer"><a >Graphic</a></li>/
+                                <li [class.active]="activeViewType == 'table'" class="cursor-pointer"><a class="customLink">Table</a></li>
                             </ul>
     
                         </div>
