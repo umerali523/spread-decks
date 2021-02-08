@@ -1,6 +1,11 @@
 .home-banner{
-    padding: 100px 0;
-    background: url(../../../assets/images/cover.jpg) no-repeat;
+    padding: 0 50px;
+    background: url('../../../assets/images/home-banner.jpg') no-repeat;
+    background-size: cover;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media screen and (max-width:550px) {
         padding: 50px 0;
     }
@@ -56,6 +61,7 @@
 }
 .wind-solar-box {
     position: relative;
+    margin-bottom: 30px;
  .wind-solar-img {
      img {
          max-width: 100%;

@@ -20,6 +20,9 @@ body {
 .bold{font-weight: bold !important;}
 .mt-50{margin-top: 50px !important;} 
 .mb-48{margin-bottom: 48px !important;}
+.v-algin-middle {
+    vertical-align: middle !important;
+}
 
 .icon {
     width:20px;
@@ -38,6 +41,8 @@ body {
 .gird-section {
     background: #fff;
     padding: 20px;
+    max-width: 90%;
+    margin: auto;
     border: 1px solid #ddd;
     margin-top: 20px;
     .filter-links {
@@ -53,6 +58,22 @@ body {
     }
     .table-wrapper {
         margin-top: 30px;
+        th {
+            .pagination {
+                margin-bottom: 0;
+                justify-content: flex-end;
+                .page-link {
+                    color: rgb(51, 51, 51);
+                    font-weight: normal;
+                }
+                .page-item.active .page-link {
+                    background-color: #cfcfcf;
+                    color: #565555;
+                    border-color: #cfcfcf;
+                }
+            }
+        }
+
         .table th {
             border-top: none;
             color: #888;
@@ -90,9 +111,24 @@ body {
 // MARKETPLACE //
 .marketplace {
     margin: 50px 0;
+    padding: 0 20px;
 }
 .marketplace-card {
     box-shadow: 1px 1px 7px 3px rgb(0 0 0 / 22%);
+    margin: 7px;
+    position: relative;
+    .tool-links {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        color: #fff;
+        z-index: 10;
+        a {
+            color: #fff;
+            margin-left: 12px;
+            display: inline-block;
+        }
+    }
     .marketplace-img {
         img {
             max-width: 100%;
@@ -270,18 +306,30 @@ body {
         .sub-links {
             text-align: right;
             margin-top: 4px;
+            .circle-dot {
+                background: #ff9e00;
+                height: 10px;
+                width: 10px;
+                display: inline-block;
+                border-radius: 12px;
+                margin-right: 10px;
+            }
             ul {
                 margin: 0;
                 padding: 0;
                 list-style: none;
                 display: inline-flex;
                 li {
-                    border-right: 1px solid #ddd;
-                    &:last-child {
-                        border:none
-                    } 
+                 
                     a {
-                        margin:0 10px;
+                        margin: 0 5px;
+                        background: #007bff;
+                        color: #fff !important;
+                        padding: 4px 13px;
+                        display: inline-block;
+                        font-size: 14px;
+                        font-weight: 600;
+                        border-radius: 6px;
                     }
                 }
             }
@@ -295,6 +343,13 @@ body {
         margin-top: 20px;
         display: flex;
         padding: 5px;
+        .tab-left {
+            .dropdown-toggle {
+                &::after {
+                    border: none;
+                }
+            }
+        }
         .tab-right {
             margin-left: auto;
             a {
@@ -332,6 +387,8 @@ body {
     }
     .tab-body {
         background: #fff;
+        max-width: 90%;
+        margin: auto;
         margin-top: 20px;
         padding: 15px;
     }
