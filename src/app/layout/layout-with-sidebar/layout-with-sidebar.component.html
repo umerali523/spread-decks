@@ -6,8 +6,8 @@
             </button>
             <div class="collapse navbar-collapse w-100">
                 <ul class="nav navbar-nav w-100">
-                    <li class="nav-item active pr-66">
-                        <a class="nav-link" routerLink="marketplace">Marketplace</a>
+                    <li class="nav-item active pr-78">
+                        <a class="nav-link" routerLink="marketplace"><span class="bold-text">Market</span>Center</a>
                     </li>
                     <li>
                         <i class="fas fa-search search_ic"></i>
@@ -39,6 +39,53 @@
     </nav>
     
 </div>
-<div class="page-wrapper">
+<!-- <div class="page-wrapper">
     <router-outlet></router-outlet>
+</div> -->
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a><i class="fas fa-rss"></i> Casts (3)</a>
+            </li>
+            <li>
+                <a><i class="fas fa-flag"></i> IOIs (0)</a>
+            </li>
+            <li>
+                <a><i class="fas fa-bolt"></i> Orders</a>
+                <ul class="list-unstyled" id="OrdersSubmenu">
+                    <li>
+                        <a href="#">Bid & Offer</a>
+                    </li>
+                    <li>
+                        <a href="#">Bid</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Trades</a>
+                <ul class="list-unstyled" id="TradeSubmenu">
+                    <li>
+                        <a href="#">Sell 2mm</a>
+                    </li>
+                    <li>
+                        <a href="#">Sell 2mm</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="fas fa-at"></i> Negotiatons</a>
+                <ul class="list-unstyled" id="TradeSubmenu">
+                    <li>
+                        <a href="#">Eve C</a>
+                    </li>
+                    <li>
+                        <a href="#">Stephanie C</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
 </div>

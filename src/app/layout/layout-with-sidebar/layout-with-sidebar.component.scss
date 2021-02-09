@@ -47,20 +47,8 @@
 }
 #searchInp{
     width: 242px;
+    padding-left: 36px;
 }
-#searchInp::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    padding-left: 22px;
-  }
-  
-  #searchInp:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    padding-left: 22px;
-
-  }
-  
-  #searchInp::-ms-input-placeholder { /* Microsoft Edge */
-    padding-left: 22px;
-
-  }
   .custom-circle{
     border-radius: 50%;
     background-color: #fff;
@@ -84,3 +72,69 @@
     width: 200px;
     text-align: center;
   }
+
+
+
+
+
+
+
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+  #sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #25253a;
+    color: #fff;
+    transition: all 0.3s;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    border-top: 1px solid;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+}
+
+#sidebar ul.components {
+    // padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #25253a;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    // background: #6d7fcc;
+}
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
