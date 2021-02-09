@@ -14,6 +14,8 @@ export class FimoComponent implements OnInit {
   }
   equityCollapsed : boolean = true;
 
+  activaTabCollapsed : boolean = true;
+  passivaTabCollapsed : boolean = true;
 
 
 
@@ -23,12 +25,12 @@ export class FimoComponent implements OnInit {
   }
 
   collapseTableRow(tabName:string){
-    if(this.activeTab.tabName!='' && this.activeTab.tabName!=tabName){
-      this.activeTab.status = false;
-    }
-    if(this.activeTab.tabName == tabName){
-      this.activeTab.status = !this.activeTab.status;
-    }
-    this.activeTab.tabName = tabName;
+    // if(this.activeTab.tabName!='' && this.activeTab.tabName!=tabName){
+    //   this.activeTab.status = false;
+    // }
+    // if(this.activeTab.tabName == tabName){
+    //   this.activeTab.status = !this.activeTab.status;
+    // }
+    // this.activeTab.tabName = tabName;
   }
 }
