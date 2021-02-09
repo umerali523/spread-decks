@@ -11,5 +11,24 @@ export class OwnerComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  activeRow: string = 'activa';
+  activeTab = {
+    tabName : 'activa',
+    status : false
+  }
+  equityCollapsed : boolean = true;
+
+  activaTabCollapsed : boolean = true;
+  passivaTabCollapsed : boolean = true;
+ 
+  collapseTableRow(tabName:string){
+    // if(this.activeTab.tabName!='' && this.activeTab.tabName!=tabName){
+    //   this.activeTab.status = false;
+    // }
+    // if(this.activeTab.tabName == tabName){
+    //   this.activeTab.status = !this.activeTab.status;
+    // }
+    // this.activeTab.tabName = tabName;
+  }
 
 }
