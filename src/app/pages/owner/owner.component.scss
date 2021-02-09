@@ -1,0 +1,71 @@
+.table tr.heighlight {
+    background: #e8eff9 !important;
+  }
+  .s-mark {
+      color: #f07d24;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 14px;
+      vertical-align:middle;
+  }
+  .t-mark {
+    background: #f07d24;
+    color: #fff;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 14px;
+    vertical-align:middle;
+}
+.font-14 {
+    font-size: 14px;
+}
+.font-13 {
+    font-size: 13px;
+}
+.font-16 {
+    font-size: 16px;
+}
+.anonymous-activity {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+
+    .time-col {
+        width: 84px;
+        font-size: 18px;
+    }
+    
+ 
+    .anonymous-activity-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+        }
+        h4 {
+            i {
+                color: #999 !important;       
+            }
+            color: #999;
+            font-size: 18px;
+        }
+        div {
+            margin-right: 30px;
+
+        }
+      
+    }
+}
+.client-activity {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        margin-right: 20px;
+    }
+}

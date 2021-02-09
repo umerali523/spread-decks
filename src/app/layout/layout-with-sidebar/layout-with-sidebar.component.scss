@@ -77,22 +77,12 @@
   .nav-buttons{
     border: 1px solid;
     border-radius: 4px;
-    margin-right: 34px;
+    margin-left: 10px;
     width: 200px;
     text-align: center;
   }
-  .cancelAll{
-      color: #f88888;
-      float: right;
-  }
-  .nav-item-tag{
-    float: right;
-    background-color: #dcd9d9;
-    border-radius: 4px;
-    color: #000;
-    width: 74px;
-    text-align: center;
-  }
+
+
   .badge {
     position: absolute;
     top: 3px;
@@ -103,68 +93,96 @@
   }
 
 
-
-
-
-
-
-
 .wrapper {
     display: flex;
     width: 100%;
-    align-items: stretch;
-}
-  #sidebar {
-    /* don't forget to add all the previously mentioned styles here too */
-    background: #25253a;
-    color: #fff;
-    transition: all 0.3s;
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    border-top: 1px solid;
-}
-#sidebar.active {
-    margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-}
-
-#sidebar ul.components {
-    // padding: 20px 0;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    color: #fff;
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-#sidebar ul li a:hover {
-    color: #25253a;
-    background: #fff;
-}
-
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    // background: #6d7fcc;
-}
-@media (max-width: 768px) {
     #sidebar {
+      background: #25253a;
+      color: #fff;
+      transition: all 0.3s;
+      min-width: 250px;
+      max-width: 250px;
+      min-height: 100vh;
+      border-top: 1px solid;
+      &.active {
         margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
+      }
+      ul {
+        li {
+          .icon-holder {
+            display: inline-block;
+            width: 25px;
+          }
+          > a {
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 1.1em;
+            display: block;
+            font-weight: 600;
+            &:hover {
+              color: #fff;
+              background: #5e92f5;
+            }
+            .nav-item-tag{
+              float: right;
+              background-color: #dcd9d9;
+              border-radius: 4px;
+              color: #000;
+              width: 74px;
+              text-align: center;
+              font-size: 13px;
+            }
+            .cancelAll{
+              color: #f88888;
+              float: right;
+              font-size: 14px;
+          }
+          }
+          &.active {
+            a  {
+              color: #fff;
+              background: #5e92f5;
+            }
+          }
+          p {
+            color: #fff;
+            padding: 10px;
+          }
+
+          ul {
+            li {
+              a {
+                .icon-holder {
+                  color: #fdc200;
+                }
+                font-weight: normal;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+  }
 }
+
+#sidebar > ul > li {
+  margin-bottom: 10px;
+ }
+ #content {
+   width: 100%;
+   padding: 20px;
+ }
+ .trade-icon {
+  background: #fff;
+  color: #000;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 30px;
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2px;
+ }
