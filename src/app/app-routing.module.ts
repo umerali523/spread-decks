@@ -22,7 +22,7 @@ const routes: Routes = [
  
   ]},
   {path: '', component: LayoutWithSidebarComponent, children:[
-    { path:'owner' , component:OwnerComponent},
+    { path:'secondary' , component:OwnerComponent},
   ]},
   {path:'' , component:AppLayoutComponent, children:[
     { path:'project-valuation' , component:ProjectValuationComponent},
