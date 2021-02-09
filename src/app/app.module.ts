@@ -14,6 +14,8 @@ import { TradeSharesComponent } from './pages/trade-shares/trade-shares.componen
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { FimoComponent } from './pages/project-detail/project-tabs/fimo/fimo.component';
 import { ChartsModule } from 'ng2-charts';
+import { OwnerComponent } from './pages/owner/owner.component';
+import { LayoutWithSidebarComponent } from './layout/layout-with-sidebar/layout-with-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { ChartsModule } from 'ng2-charts';
     BlankLayoutComponent,
     TradeSharesComponent,
     ProjectDetailComponent,
-    FimoComponent
+    FimoComponent,
+    OwnerComponent,
+    LayoutWithSidebarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,45 @@
+@import '../../../assets/scss/main.scss';
+
+.website-header {
+    background-color: $theme-color;
+      
+        .navbar {
+            .nav-item {
+                text-transform: uppercase;
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: $red-color;
+                    }
+                }
+            }
+        } 
+
+      @media screen and (min-width: 992px) {
+    
+        .logo {
+          position: relative;
+        }
+        .navbar-light .navbar-nav .nav-link {
+          padding-right: 75px;
+        }
+        .nav-left {
+          padding-left: 30px;
+        }
+      }
+      @media (min-width: 992px) {
+        .navbar-toggleable-md .navbar-toggler {
+            display: none;
+        }
+        .navbar-toggleable-md .navbar-collapse {
+            display: -webkit-box!important;
+            display: -webkit-flex!important;
+            display: -ms-flexbox!important;
+            display: flex!important;
+            width: 100%;
+        }
+    }
+}
+
+
+
