@@ -40,6 +40,47 @@
         }
     }
 }
+.search_ic{
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 12px;
+}
+#searchInp{
+    width: 242px;
+}
+#searchInp::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    padding-left: 22px;
+  }
+  
+  #searchInp:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding-left: 22px;
 
+  }
+  
+  #searchInp::-ms-input-placeholder { /* Microsoft Edge */
+    padding-left: 22px;
 
-
+  }
+  .custom-circle{
+    border-radius: 50%;
+    background-color: #fff;
+    height: 28px;
+    width: 30px;
+    margin-top: 5px;
+    margin-right: 4px;
+  }
+  .custom-circle-nav-link{
+    color: #000 !important;
+    line-height: 15px;
+    font-weight: bold;
+  }
+  .fs-24{
+      font-size: 24px;
+  }
+  .nav-buttons{
+    border: 1px solid;
+    border-radius: 4px;
+    margin-right: 34px;
+    width: 200px;
+    text-align: center;
+  }
