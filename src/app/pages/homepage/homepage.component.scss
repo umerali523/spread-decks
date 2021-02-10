@@ -1,11 +1,12 @@
 .home-banner{
     padding: 0 50px;
-    background: url('../../../assets/images/home-banner.jpg') no-repeat;
+    background: url('../../../assets/images/homebg.jpg') no-repeat;
     background-size: cover;
     height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
     @media screen and (max-width:550px) {
         padding: 50px 0;
     }
@@ -17,15 +18,15 @@
         }
        color: #fff;
         h2 {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 700;
         }
         p {
-            font-size: 24px;
+            font-size: 20px;
             margin-top: 20px;
         }
         .large-btn {
-            font-size: 24px;
+            font-size: 20px;
             background: #fefefe;
             color: #25253a;
             text-transform: uppercase;
