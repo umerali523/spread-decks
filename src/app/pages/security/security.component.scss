@@ -44,8 +44,7 @@
                         margin-right: 10px; 
                         font-size: 21px;
                     }
-                    .success_ic{color: #c3ffd0;}
-                    .danger_ic{color: #fcc0c0bd;}
+                    
                     .breadcrumb-nav-text{ font-size: 14px; }
                     .underline{ text-decoration: underline;}
                     .tick_ic,.cross_ic{
@@ -262,7 +261,7 @@
 }
 .grid-button-disable{
     color : #000;
-    border: 2px solid #f8f8f5;
+    border: 2px solid #edede9;
 }
 
 .left-small-container{
@@ -288,10 +287,11 @@
 }
 // .font-13{font-size: 13px;}
 // .fw-600 {font-weight: 600;}
-// // .whitelist-off-label{
-// //     font-size: 14px;
-// //     border-bottom: 2px dotted;
-// // }
+.whitelist-off-label{
+    font-size: 14px;
+    border-bottom: 2px dotted;
+    margin-right: 26px;
+}
 
 
 .authentication-list {
@@ -304,20 +304,21 @@
         .authentication-logo {
             height: 50px;
             width: 50px;
-            background: red;
             margin-right: 10px;
+            font-size: 30px;
             img {
                 max-width: 100%;
             }
         }
         .authentication-summary {
             h3 {
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 700;
                 margin-bottom: 0;
             }
             p {
                 color: #6b6b6b;
+                font-size: 12px;
             }
         }
         .authentication-btn {
@@ -342,4 +343,43 @@
         width: 100px;
         margin-left: auto;
     }
+    .heading{
+        font-weight: 700;
+        font-size: 16px;
+    }
+    p{
+        font-size: 12px;
+        width: 600px;
+        color: #6b6b6b;
+    }
+    .sub-text{
+        font-weight: 700;
+    }
+    .colored-link{
+        text-decoration: underline;
+        color: #e7c358;
+        cursor: pointer;
+    }
+    .stack-group{
+        line-height: unset;
+        height: unset;
+        width: 1.5em;
+        margin-bottom: 24px;
+        .success_ic{
+            font-size: 21px;
+        }
+    }
+    .custom-btn-holder{
+        width: unset;
+    }
+}
+.success_ic{color: #c3ffd0;}
+.danger_ic{color: #fcc0c0bd;}
+.tick_ic,.cross_ic{
+    font-size: 14px;
+    color: #49d1a5;
+    padding-top: 0.5px;
+}
+.cross_ic{
+    color: #ff3654;
 }

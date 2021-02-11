@@ -57,15 +57,17 @@
 
 <div class="row">
     <div class="col-md-6">
-        <div class="card mb-4">
+        <div class="card mb-4 mt-3">
             <div class="card-body">
-              <h5 class="card-title">2FA</h5>
+              <h5 class="card-title bold-text">2FA</h5>
                 <div class="authentication-list">
                         <div class="authentication-item">
-                            <div class="authentication-logo"></div>
+                            <div class="authentication-logo">
+                                <i class="fab fa-google"></i>
+                            </div>
                             <div class="authentication-summary">
                                 <h3>Google Authentication</h3>
-                                <p>text here</p>
+                                <p class="text-muted">Used for withdrawls and security modifications</p>
                             </div>
                             <div class="authentication-btn">
                                 <div class="btn-holder">
@@ -75,27 +77,31 @@
 
                         </div>
                         <div class="authentication-item">
-                            <div class="authentication-logo"></div>
+                            <div class="authentication-logo">
+                                <i class="fas fa-sms"></i>
+                            </div>
                             <div class="authentication-summary">
-                                <h3>Google Authentication</h3>
-                                <p>text here</p>
+                                <h3>SMS Authentication</h3>
+                                <p>Used for withdrawls and security modifications</p>
                             </div>
                             <div class="authentication-btn">
                                 <div class="btn-holder">
-                                    <button type="button" class="btn btn-outline-warning  btn-block">On</button>
+                                    <button type="button" class="btn grid-button-disable btn-block">Disable</button>
                                 </div>
                             </div>
 
                         </div>
                         <div class="authentication-item">
-                            <div class="authentication-logo"></div>
+                            <div class="authentication-logo">
+                                <i class="far fa-envelope"></i>
+                            </div>
                             <div class="authentication-summary">
-                                <h3>Google Authentication</h3>
-                                <p>text here</p>
+                                <h3>E-mail Address</h3>
+                                <p>Used for withdrawls and security modifications</p>
                             </div>
                             <div class="authentication-btn">
                                 <div class="btn-holder">
-                                    <button type="button" class="btn btn-outline-warning  btn-block">On</button>
+                                    <button type="button" class="btn btn-outline-warning  btn-block">Change</button>
                                 </div>
                             </div>
 
@@ -110,32 +116,96 @@
          
 
 
-          <div class="single-action-card">
+        <div class="single-action-card mb-4">
                 <div class="heading">
-                    heading here
+                    Device Management
                 </div>
                 <div class="btn-holder">
-                    <button type="button" class="btn btn-outline-warning  btn-block">On</button>
+                    <button type="button" class="btn  grid-button-disable btn-block">
+                        <span>Manage</span>
+                    </button>
                 </div>
             
-          </div>
+        </div>
+        <div class="single-action-card mb-4">
+            <div class="heading">
+                Login Password
+            </div>
+            <div class="btn-holder">
+                <button type="button" class="btn grid-button-disable btn-block">
+                   <span>Change</span> 
+                </button>
+            </div>
+        
+        </div>
           
 
     </div>
-    <div class="col-md-6">
-
+    <div class="col-md-6 mt-3">
         <div class="single-action-card">
+            <div class="heading">
+                Identity Verification
+            </div>
+            <div class="btn-holder custom-btn-holder">
+                <a>
+                    <span class="fa-stack fa-2x stack-group">
+                        <i class="fa fa-circle fa-stack-2x success_ic"></i>
+                        <i class="fa fa-check fa-stack-1x tick_ic"></i> 
+                    </span>
+                    Verified
+                    <!-- <span class="breadcrumb-nav-text">  Enable 2FA</span> -->
+                </a>
+                <!-- <div class="text-success">
+                    <i class="far fa-check-circle"></i>  <span style="color: #000;">  Verified</span>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="single-action-card mt-4">
             <div class="left-col">
-                <h4>heading here</h4>
-                <p>text here</p>
+                <span class="heading">IP Address Management</span>
+                <p>IP Address Management allows you to define the list of
+                    IP addresses that are allowed to log in to your account.
+                    Unauthorized IP Address logins will have to verified by
+                    you.
+                </p>
+                <div>
+                    <span class="whitelist-off-label">Whitelist Off</span>
+                      <label class="form-switch">
+                         <input type="checkbox" id="omni_payment_mode">
+                         <span class="form-switch-slider round"></span>
+                     </label> 
+                    
+                   </div>
             </div>
             <div class="btn-holder">
                 <button type="button" class="btn btn-outline-warning  btn-block">On</button>
             </div>
-        
-      </div>
+        </div>
+        <div class="single-action-card mt-4">
+            <div class="left-col">
+                <span class="heading">Anti-phishing Code</span>
+                <p>By setting up an Anti-phishing Code, you will be able to tell 
+                    if your notification emails are coming from the spread platform,
+                    or are phishing attempts.
+                </p>
+            </div>
+            <div class="btn-holder">
+                <button type="button" class="btn btn-outline-warning  btn-block">Enable</button>
+            </div>
+        </div>
+        <div class="single-action-card mt-4">
+            <div class="left-col">
+                <span class="heading">Account Activity</span>
+                <p>Last login: 2021-02-10 11:28:55</p>
+                <p class="sub-text">Suspicious account activity? <a class="colored-link">Disable account</a></p>
+            </div>
+            <div class="btn-holder">
+                <button type="button" class="btn btn-outline-warning  btn-block">Enable</button>
+            </div>
+        </div>
       
-      <div class="single-action-card">
+      <!-- <div class="single-action-card">
         <div class="left-col">
             <h4>heading here</h4>
             <p>text here</p>
@@ -151,7 +221,7 @@
             
         </div>
     
-  </div>
+  </div> -->
 
     </div>
 
@@ -176,7 +246,7 @@
                                 </div>
                                 <div class="left-grid-text-section">
                                     <span class="left-grid-text-title">Google Authentication</span><br>
-                                    <span class="text-muted font-12 left-grid-text-data">Used for withdrawls and security modifications</span>
+                                    <span class="text-muted font-12 left-grid-text-data"></span>
                                 </div>
                             </div>
                             <div class="col-md-2 center-align">
@@ -289,7 +359,7 @@
                             Last login: 2021-02-10 11:28:55 
                         </div>
                         <div class="font-13 fw-600">
-                            Suspicious account activity? <a>Disable account</a>
+                            
                         </div>
                     </div>
                     <div class="col-md-6 center-align">
