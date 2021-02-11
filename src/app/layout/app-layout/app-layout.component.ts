@@ -45,5 +45,8 @@ export class AppLayoutComponent implements OnInit,OnDestroy {
       this.routerSub.unsubscribe();
     }
   }
+  routeToSecurity(){
+    this.router.navigate(['/security']);
+  }
 
 }

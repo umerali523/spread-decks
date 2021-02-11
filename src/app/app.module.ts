@@ -16,6 +16,7 @@ import { FimoComponent } from './pages/project-detail/project-tabs/fimo/fimo.com
 import { ChartsModule } from 'ng2-charts';
 import { OwnerComponent } from './pages/owner/owner.component';
 import { LayoutWithSidebarComponent } from './layout/layout-with-sidebar/layout-with-sidebar.component';
+import { SecurityComponent } from './pages/security/security.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { LayoutWithSidebarComponent } from './layout/layout-with-sidebar/layout-
     ProjectDetailComponent,
     FimoComponent,
     OwnerComponent,
-    LayoutWithSidebarComponent
+    LayoutWithSidebarComponent,
+    SecurityComponent
   ],
   imports: [
     BrowserModule,

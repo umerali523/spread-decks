@@ -9,6 +9,7 @@ import { OwnerComponent } from './pages/owner/owner.component';
 import { PortfolioValuationComponent } from './pages/portfolio-valuation/portfolio-valuation.component';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { ProjectValuationComponent } from './pages/project-valuation/project-valuation.component';
+import { SecurityComponent } from './pages/security/security.component';
 import { TradeSharesComponent } from './pages/trade-shares/trade-shares.component';
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
     { path:'project-valuation' , component:ProjectValuationComponent},
     { path:'portfolio-valuation' , component:PortfolioValuationComponent},
     { path:'project-valuation-details' , component:ProjectDetailComponent},
+    { path:'security', component: SecurityComponent }
   ]},
   { path:'**' , redirectTo:'home' , pathMatch:'full'}, 
 
