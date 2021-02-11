@@ -17,6 +17,7 @@ import { ChartsModule } from 'ng2-charts';
 import { OwnerComponent } from './pages/owner/owner.component';
 import { LayoutWithSidebarComponent } from './layout/layout-with-sidebar/layout-with-sidebar.component';
 import { SecurityComponent } from './pages/security/security.component';
+import { SecondaryOwnerComponent } from './pages/secondary-owner/secondary-owner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { SecurityComponent } from './pages/security/security.component';
     FimoComponent,
     OwnerComponent,
     LayoutWithSidebarComponent,
-    SecurityComponent
+    SecurityComponent,
+    SecondaryOwnerComponent
   ],
   imports: [
     BrowserModule,
