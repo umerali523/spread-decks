@@ -1,4 +1,139 @@
+$greenColor: #3aec49;
+$borderWidth: 8px;
+$animationTime: .5s;
+$border-color-default: #efefef;
+$border-color-fill: $greenColor;
+$size: 50px;
+$howManySteps: 100; //this needs to be even. 
+
+.progress-circle {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: $borderWidth solid $border-color-default;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .progress-left {
+    left: 0;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: $borderWidth;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: $border-color-fill;
+  }
+  .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: ($size/2);;
+    border-bottom-right-radius: ($size/2);;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+    //animation: loading-2 1.5s linear forwards 1.8s;
+  }
+  .progress-right {
+    right: 0;
+    .progress-bar {
+      left: -100%;
+      border-top-left-radius: ($size/2);;
+      border-bottom-left-radius: ($size/2);;
+      border-right: 0;
+      -webkit-transform-origin: center right;
+      transform-origin: center right;
+      //animation: loading-1 1.8s linear forwards;
+    }
+  }
+  .progress-value {
+    display: flex;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* This for loop creates the necessary css animation names 
+Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+*/
+@for $i from 1 through $howManySteps {
+	$stepName: ($i*(100 / $howManySteps));
+
+	//animation only the left side if below 50%
+	@if $i <= ($howManySteps/2) { 
+		.progress-circle[data-percentage="#{$stepName}"] {
+			.progress-right .progress-bar {
+				 animation: loading-#{$i} $animationTime linear forwards;
+			}
+			.progress-left .progress-bar {animation: 0;}
+		}
+	}
+	//animation only the right side if above 50%
+	@if $i > ($howManySteps/2)  {  
+		.progress-circle[data-percentage="#{$stepName}"] {
+			.progress-right .progress-bar {
+				animation: loading-#{($howManySteps/2)} $animationTime linear forwards; //set the animation to longest animation
+			}
+			.progress-left .progress-bar {
+      animation: loading-#{$i - ($howManySteps/2)} $animationTime linear forwards $animationTime;
+    }
+		}
+	}
+}
+
+//animation
+@for $i from 1 through ($howManySteps/2) { 
+	$degrees: (180/($howManySteps/2));
+	$degrees: ($degrees*$i);
+	@keyframes loading-#{$i}{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate($degrees);
+			transform: rotate(#{$degrees}deg);
+    }
+	}
+}
 .secondary-owner{
+    .down-arrow {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+   
     .top-bar{
         background-color: #fff;
         margin-left: -15px;
@@ -14,8 +149,200 @@
 
     }
     .owner-content-wrapper{
+        margin-top: 20px;
+        margin-bottom: 20px;
         .card-holder-white{
+            padding: 15px;
             background-color: #fff;
         }
     }
+    .traker-bars {
+        h4 {
+            font-size: 14px;
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
+    }
+    .folders-section {
+        margin-top: 20px;
+
+        .folder-item {
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            padding-bottom: 10px;
+            .folder-item-head {
+                display: flex;
+                h4 {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 13px;
+                }
+                .folder-prograss {
+                    margin-left: auto;
+                }
+            }
+            .folder-item-footer {
+                display: flex;
+                align-items: flex-end;
+                justify-content: end;
+
+                .users-count {
+                    font-size: 36px;
+                    position: relative;
+                    span {
+                        position: absolute;
+                        top: 0;
+                        right: -10px;
+                        color: #fff;
+                        background: $greenColor;
+                        border-radius: 50%;
+                        height: 22px;
+                        width: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .share {
+                    margin-left: auto;
+                    font-size: 28px;
+                }
+            }
+          
+          
+        }
+    
+        .folder-users {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .folder-user-item {
+                background: #fff;
+                display: flex;
+                height: 80px;
+                width: 80px;
+                justify-content: center;
+                align-items: flex-end;
+                padding: 10px;
+                border-radius: 5px;
+                color: #c3c3c3;
+                margin: 5px;
+            
+                .prograss-share {
+                    margin-left: auto;
+                }
+                .user {
+                    font-size: 26px;
+                }
+                .share {
+                    font-size: 26px;
+                }
+            
+
+               .progress-circle {
+                   height: 30px;
+                   width: 30px;
+                   &::after {
+                    border: 5px solid #efefef !important;
+                   }
+                   .progress-bar {
+                    border-width: 5px;
+                   }
+               }
+            }
+        }
+    }
+    
+.participants-item {
+    .item-body {
+        position: relative;
+        display: flex;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding-top: 17px;
+
+         &::before {
+            content: "";
+            height: 18px;
+            background: #c3c3c3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-radius: 4px 4px 0 0;
+         }
+        .user-avatar {
+            font-size: 40px;
+            width: 55px;
+            text-align: center;
+            color: #838383;
+        }
+        .user-info {
+            font-size: 14px;
+            margin-top: 7px;
+            margin-left: 7px;
+        }
+
+     
+    }
+    .item-footer {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &.color-1 {
+        .item-body{
+            &::before {
+                background: red;
+            }
+        }
+    }
+    &.color-2 {
+        .item-body{
+            &::before {
+                background: red;
+            }
+        }
+    }
+    &.color-3 {
+        .item-body{
+            &::before {
+                background: red;
+            }
+        }
+    }
+}
+
+.sidebar {
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 87vh;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            text-align: center;
+            .circle {
+                display: inline-block;
+                background: #838383;
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+            }
+            h4 {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+    
 }

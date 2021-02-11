@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-secondary-owner',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondaryOwnerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private render2: Renderer2,
+    private element: ElementRef
+
+  ) { }
 
   ngOnInit(): void {
   }
 
-}
+
+
+  
+  
+
+  }
+  
