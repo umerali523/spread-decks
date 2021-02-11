@@ -31,7 +31,7 @@ const routes: Routes = [
     { path:'portfolio-valuation' , component:PortfolioValuationComponent},
     { path:'project-valuation-details' , component:ProjectDetailComponent},
     { path:'security', component: SecurityComponent },
-    { path:'secondary-owner', component: SecondaryOwnerComponent }
+    { path:'owner', component: SecondaryOwnerComponent }
   ]},
   { path:'**' , redirectTo:'home' , pathMatch:'full'}, 
 

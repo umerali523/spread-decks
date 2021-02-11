@@ -14,10 +14,10 @@ import { TradeSharesComponent } from './pages/trade-shares/trade-shares.componen
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { FimoComponent } from './pages/project-detail/project-tabs/fimo/fimo.component';
 import { ChartsModule } from 'ng2-charts';
-import { OwnerComponent } from './pages/owner/owner.component';
 import { LayoutWithSidebarComponent } from './layout/layout-with-sidebar/layout-with-sidebar.component';
 import { SecurityComponent } from './pages/security/security.component';
 import { SecondaryOwnerComponent } from './pages/secondary-owner/secondary-owner.component';
+import { OwnerComponent } from './pages/owner/owner.component';
 @NgModule({
   declarations: [
     AppComponent,

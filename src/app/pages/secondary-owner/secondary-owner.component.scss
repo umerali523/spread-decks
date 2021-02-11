@@ -283,6 +283,13 @@ Due to the split circle of progress-left and progress right, we must use the ani
             text-align: center;
             color: #838383;
         }
+        .plus-avatar {
+            font-size: 40px;
+            width: 55px;
+            text-align: center;
+            color: #838383;
+            margin-left: 34;
+        }
         .user-info {
             font-size: 14px;
             margin-top: 7px;
@@ -299,21 +306,49 @@ Due to the split circle of progress-left and progress right, we must use the ani
     &.color-1 {
         .item-body{
             &::before {
-                background: red;
+                background: #f3fc68;
             }
         }
     }
     &.color-2 {
         .item-body{
             &::before {
-                background: red;
+                background: #f3fc68;
             }
         }
     }
     &.color-3 {
         .item-body{
             &::before {
-                background: red;
+                background: #fc61ff;
+            }
+        }
+    }
+    &.color-4 {
+        .item-body{
+            &::before {
+                background: #fc61ff;
+            }
+        }
+    }
+    &.color-5 {
+        .item-body{
+            &::before {
+                background: #80fa71;
+            }
+        }
+    }
+    &.color-6 {
+        .item-body{
+            &::before {
+                background: #80fa71;
+            }
+        }
+    }
+    &.color-7 {
+        .item-body{
+            &::before {
+                background: #efefef;
             }
         }
     }
@@ -323,16 +358,17 @@ Due to the split circle of progress-left and progress right, we must use the ani
     background: #fff;
     text-align: center;
     padding: 20px;
-    height: 87vh;
+    height: auto;
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
         li {
             text-align: center;
+            margin-top: 28px;
             .circle {
                 display: inline-block;
-                background: #838383;
+                background: #d5d4d4;
                 height: 80px;
                 width: 80px;
                 border-radius: 50%;
