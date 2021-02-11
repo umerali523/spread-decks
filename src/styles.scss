@@ -485,3 +485,83 @@ body {
 .cursor-pointer{cursor: pointer;}
 .font-12{font-size: 12px;}
 .mt-20{margin-top: 20px !important;}
+
+
+
+/*************************
+  Toggle - Switch (Slider)
+**************************/
+.form-switch {
+    position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+  }
+  .form-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .form-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .form-switch-slider:before {
+    position: absolute;
+    content: "  ";
+    height: 12px;
+    width: 14px;    
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .form-switch-slider {
+    background-color: #00c27d;
+  }
+  
+  input:focus + .form-switch-slider {
+    box-shadow: 0 0 1px #00c27d;
+  }
+  
+  input:checked + .form-switch-slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .form-switch-slider.round {
+    border-radius: 34px;
+  }
+  
+  .form-switch-slider.round:before {
+    border-radius: 50%;
+  }
+  
+  
+  .form-switch-label{
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+  }
+  .switch-left-label{
+    margin-right: 12px;
+    position: relative;
+    top: 4px;
+  }
+  .switch-right-label{
+    margin-left: 12px;
+    position: relative;
+    top: 4px;
+  }
+  /*************************/
