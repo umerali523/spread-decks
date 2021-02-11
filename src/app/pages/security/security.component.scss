@@ -12,7 +12,7 @@
         .sub-header-title{
             font-weight: 600;
             .sub-header-title-subtext{
-                font-size: 19px;
+                font-size: 21px;
                 color: #ffb843;
             }
         }
@@ -31,14 +31,31 @@
                 list-style: none;
                 display: inline-flex;
                 li {
+
                     position: relative;
                     margin-right: 90px;
+                    .stack-group{
+                        line-height: unset;
+                        height: unset;
+                        width: 1.5em;
+                        margin-bottom: 24px;
+                    }
                     i{ 
                         margin-right: 10px; 
-                        font-size: 17px;
+                        font-size: 21px;
                     }
+                    .success_ic{color: #c3ffd0;}
+                    .danger_ic{color: #fcc0c0bd;}
                     .breadcrumb-nav-text{ font-size: 14px; }
                     .underline{ text-decoration: underline;}
+                    .tick_ic,.cross_ic{
+                        font-size: 14px;
+                        color: #49d1a5;
+                        padding-top: 0.5px;
+                    }
+                    .cross_ic{
+                        color: #ff3654;
+                    }
                 }
             }
         }
