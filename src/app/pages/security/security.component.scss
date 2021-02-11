@@ -292,3 +292,54 @@
 // //     font-size: 14px;
 // //     border-bottom: 2px dotted;
 // // }
+
+
+.authentication-list {
+    .authentication-item {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+
+        .authentication-logo {
+            height: 50px;
+            width: 50px;
+            background: red;
+            margin-right: 10px;
+            img {
+                max-width: 100%;
+            }
+        }
+        .authentication-summary {
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+            p {
+                color: #6b6b6b;
+            }
+        }
+        .authentication-btn {
+            margin-left: auto;
+            .btn-holder {
+                width: 100px;
+            }
+        }
+    }
+}
+
+.single-action-card {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    align-items: center;
+    .btn-holder {
+        width: 100px;
+        margin-left: auto;
+    }
+}
